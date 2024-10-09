@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 
-function App() {
+import 'react-responsive-modal/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { WebSocketProvider } from './api/websocke/Websocket.js';
+import AppRoutes from './Routes.js';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ overflowy: 'scroll' }}>
+      <WebSocketProvider>
+        <ToastContainer />
+        <AppRoutes />
+      </WebSocketProvider>
     </div>
   );
-}
+};
 
 export default App;

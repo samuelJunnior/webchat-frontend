@@ -1,0 +1,27 @@
+{
+  "extends": ["react-app", "prettier"],
+  "plugins": ["react", "react-hooks", "prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+  },
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-unused-expressions": "warn",
+    "no-unused-labels": "warn",
+    "arrow-parens": "warn",
+    "no-trailing-spaces": "error",
+    "comma-dangle": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "warn",
+  },
+}
